@@ -1,6 +1,7 @@
 // import PropTypes from "prop-types"; // Import PropTypes
 import { Link } from "react-router-dom";
 import styles from "./CityItem.module.css";
+import { useCities } from "../../contexts/CitiesContext";
 /* eslint-disable react/prop-types */
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -11,10 +12,13 @@ const formatDate = (date) =>
 
 function CityItem({ city }) {
   const { cityName, emoji, id, date, position } = city;
+  const { currCity } = useCities();
   return (
     <li>
       <Link
-        className={styles.cityItem}
+        className={`${styles.cityItem} ${
+          id === currCity.id ? styles["cityItem--active"] : ""
+        }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
         {/*Goes to the cities/id param*/}
