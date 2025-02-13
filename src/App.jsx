@@ -9,6 +9,7 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./Components/components/CityList";
 import CountryList from "./Components/components/CountryList";
+import City from "./Components/components/City";
 // import styles from "./PageNav.module.css";
 
 function App() {
@@ -47,13 +48,15 @@ function App() {
             path="cities"
             element={<CityList cities={cities} isLoading={isLoading} />}
           />
+          <Route path="cities/:id" element={<City />} />
+          {/* this is used as a paramwithin cities */}
           <Route
             path="countries"
             element={<CountryList cities={cities} isLoading={isLoading} />}
           />
           <Route path="form" element={<p>Form</p>} />
         </Route>
-        <Route path="/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
