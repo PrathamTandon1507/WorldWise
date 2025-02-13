@@ -1,7 +1,6 @@
 import Spinner from "./Spinner";
 import styles from "./CountryList.module.css";
-import CityItem from "./CityItem";
-import PropTypes from "prop-types"; // Import PropTypes
+import CountryItem from "./CountryItem";
 import Message from "./Message";
 /* eslint-disable react/prop-types */
 
@@ -12,17 +11,20 @@ function CountryList({ cities, isLoading }) {
     return (
       <Message message="Add your first city by clicking on a city on the map!" />
     );
+
+  const countries = cities.reduce((arr, city) => {
+    if (!arr.map((el) => el.country).includes(city.country))
+      return [...arr, { country: city.country, emoji: city.emoji }];
+    else return arr;
+  }, []);
+
   return (
     <ul className={styles.countryList}>
-      {cities.map((city) => (
-        <CityItem city={city} key={city.id} />
+      {countries.map((country) => (
+        <CountryItem country={country} key={Date.now()} />
       ))}
     </ul>
   );
 }
-CountryList.propTypes = {
-  cities: PropTypes.array.isRequired, // cities should be an array and is required
-  isLoading: PropTypes.bool.isRequired, // isLoading should be a boolean and is required
-};
 
 export default CountryList;
