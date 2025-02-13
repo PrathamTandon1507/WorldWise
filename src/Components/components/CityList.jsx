@@ -1,11 +1,11 @@
 import Spinner from "./Spinner";
 import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
-import PropTypes from "prop-types"; // Import PropTypes
 import Message from "./Message";
-// /* eslint-disable react/prop-types */
+import { useCities } from "../../contexts/CitiesContext";
 
-function CityList({ cities, isLoading }) {
+function CityList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
@@ -20,9 +20,4 @@ function CityList({ cities, isLoading }) {
     </ul>
   );
 }
-CityList.propTypes = {
-  cities: PropTypes.array.isRequired, // cities should be an array and is required
-  isLoading: PropTypes.bool.isRequired, // isLoading should be a boolean and is required
-};
-
 export default CityList;
