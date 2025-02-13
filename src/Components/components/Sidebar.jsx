@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import AppNav from "./AppNav";
 import Logo from "./Logo";
 import styles from "./Sidebar.module.css";
@@ -7,7 +8,8 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-      <p>List of cities</p>
+      <Outlet />{" "}
+      {/*Added to be able to display sub-routes [cities,countries,form] | BASICALLY LIKE CHILDREN PROP*/}
       <footer className={styles.footer}>
         <p className="styles.copyright">
           &copy; Copyright {new Date().getFullYear()} WorldWise Inc.
