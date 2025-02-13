@@ -16,7 +16,7 @@ function CitiesProvider({ children }) {
         const data = await res.json();
         setCities(data);
       } catch {
-        alert("Error loading data!");
+        console.log("Error loading data!");
       } finally {
         setIsLoading(false);
       }
@@ -31,7 +31,7 @@ function CitiesProvider({ children }) {
       const data = await res.json();
       setCurrCity(data);
     } catch {
-      alert("Error loading data!");
+      console.log("Error loading data!");
     } finally {
       setIsLoading(false);
     }
