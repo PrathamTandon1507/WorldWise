@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import CityList from "./Components/components/CityList";
 import CountryList from "./Components/components/CountryList";
 import City from "./Components/components/City";
+import Form from "./Components/components/Form";
+
 // import styles from "./PageNav.module.css";
 
 function App() {
@@ -54,7 +56,7 @@ function App() {
             path="countries"
             element={<CountryList cities={cities} isLoading={isLoading} />}
           />
-          <Route path="form" element={<p>Form</p>} />
+          <Route path="form" element={<Form />} />
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
