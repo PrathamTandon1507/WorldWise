@@ -35,6 +35,30 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "id": "737d",
+      "cityName": "Morella",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-14T06:40:17.081Z",
+      "notes": "lvoed it",
+      "position": {
+        "lat": "40.53951981075568",
+        "lng": "-0.12178812561548293"
+      }
+    },
+    {
+      "id": "80ac",
+      "cityName": "Priboj",
+      "country": "Serbia",
+      "emoji": "🇷🇸",
+      "date": "2025-02-14T06:40:44.053Z",
+      "notes": "bygbgftgbfyx",
+      "position": {
+        "lat": "43.469006576714975",
+        "lng": "19.335937500000004"
+      }
     }
   ]
 }
