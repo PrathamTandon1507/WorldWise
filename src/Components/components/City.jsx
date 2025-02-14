@@ -20,6 +20,7 @@ function City() {
   // const lat = searchParams.get("lat");
   // const lng = searchParams.get("lng");
   const { id } = useParams(); //getting param from cities/id
+  console.log(id);
   const { getCity, currCity, isLoading } = useCities();
   useEffect(
     function () {
@@ -30,13 +31,13 @@ function City() {
 
   const { cityName, emoji, date, notes } = currCity;
   if (isLoading) return <Spinner />;
-
+  console.log(cityName);
   return (
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{emoji}</span> {cityName}
+          {emoji} {cityName}
         </h3>
       </div>
 

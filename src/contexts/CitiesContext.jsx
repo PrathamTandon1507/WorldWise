@@ -2,7 +2,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 
 const CitiesContext = createContext();
 /* eslint-disable react/prop-types */
-function CitiesProvider({ children }) {
+function CitiesProvider({ children, c }) {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currCity, setCurrCity] = useState({});
@@ -12,7 +12,7 @@ function CitiesProvider({ children }) {
     async function fetchCities() {
       try {
         setIsLoading(true);
-        const res = await fetch(`${URL}/cities`);
+        const res = await fetch(`${URL}/cities/?lat=&lng=`);
         const data = await res.json();
         setCities(data);
       } catch {
@@ -27,7 +27,7 @@ function CitiesProvider({ children }) {
   async function getCity(id) {
     try {
       setIsLoading(true);
-      const res = await fetch(`${URL}/cities/${id}`);
+      const res = await fetch(`${URL}/cities/${id}?lat=&lng=`);
       const data = await res.json();
       setCurrCity(data);
     } catch {
