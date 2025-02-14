@@ -37,27 +37,15 @@
       "id": 98443197
     },
     {
-      "id": "737d",
-      "cityName": "Morella",
+      "id": "db18",
+      "cityName": "Valencia",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2025-02-14T06:40:17.081Z",
-      "notes": "lvoed it",
+      "date": "2025-02-14T09:52:39.090Z",
+      "notes": "hey there just visited valencia lmao",
       "position": {
-        "lat": "40.53951981075568",
-        "lng": "-0.12178812561548293"
-      }
-    },
-    {
-      "id": "80ac",
-      "cityName": "Priboj",
-      "country": "Serbia",
-      "emoji": "🇷🇸",
-      "date": "2025-02-14T06:40:44.053Z",
-      "notes": "bygbgftgbfyx",
-      "position": {
-        "lat": "43.469006576714975",
-        "lng": "19.335937500000004"
+        "lat": "39.43719993777483",
+        "lng": "-0.37353515625000006"
       }
     }
   ]
