@@ -15,7 +15,7 @@ import Button from "./Button";
 import { useUrlPosition } from "../../hooks/useUrlPosition";
 
 function Map() {
-  // const navigate = useNavigate(); // You had this commented out, but might need it later
+  // const navigate = useNavigate();
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const { cities } = useCities();
   const [mapLat, mapLng] = useUrlPosition();
@@ -23,8 +23,8 @@ function Map() {
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
-    getLocation: getPosition, // Renamed to getLocation for clarity, and to match useGeolocation hook
-    error: geolocationError, // Capture error from useGeolocation
+    getLocation: getPosition,
+    error: geolocationError,
   } = useGeolocation();
 
   useEffect(

@@ -1,8 +1,7 @@
 import { createContext, useState, useEffect, useContext } from "react";
 
-const CitiesContext = createContext();
 /* eslint-disable react/prop-types */
-function CitiesProvider({ children, c }) {
+function CitiesProvider({ children }) {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currCity, setCurrCity] = useState({});
@@ -79,6 +78,8 @@ function CitiesProvider({ children, c }) {
     </CitiesContext.Provider>
   );
 }
+
+const CitiesContext = createContext();
 
 function useCities() {
   const context = useContext(CitiesContext);

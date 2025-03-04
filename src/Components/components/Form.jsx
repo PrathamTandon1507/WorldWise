@@ -48,6 +48,7 @@ function convertToEmoji(countryCode) {
 function Form() {
   const [lat, lng] = useUrlPosition();
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
+  const [isLoadingImage, setIsLoadingImage] = useState(false);
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
   const navigate = useNavigate();
@@ -94,6 +95,7 @@ function Form() {
   async function fetchCityImage(city) {
     if (!city) return;
     try {
+      setIsLoadingImage(true);
       const res = await fetch(
         `https://api.unsplash.com/search/photos?query=${city}&client_id=${UNSPLASH_ACCESS_KEY}&per_page=1`
       );
@@ -103,6 +105,8 @@ function Form() {
       }
     } catch (error) {
       console.error("Error fetching city image:", error);
+    } finally {
+      setIsLoadingImage(false);
     }
   }
 
@@ -199,11 +203,15 @@ function Form() {
       {cityImage && (
         <div className={styles.cityInfo}>
           <h3>About {cityName}</h3>
-          <img
-            src={cityImage}
-            alt={`View of ${cityName}`}
-            className={styles.cityImage}
-          />
+          {isLoadingImage ? (
+            <Spinner />
+          ) : (
+            <img
+              src={cityImage}
+              alt={`View of ${cityName}`}
+              className={styles.cityImage}
+            />
+          )}
           <p className={styles.cityDescriptionText}>
             {cityDescription || "No description available."}
           </p>{" "}
