@@ -1,8 +1,27 @@
-# React + Vite
+# 🧭 WorldWise – React-Based Travel Planning & Exploration App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**WorldWise** is a React application designed to help users plan, explore, and visualize travel destinations across the globe. The app includes city and country listings, map-based visualization, real-time geolocation, and interactive UI powered by APIs like **Unsplash** and **Wikipedia**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
+
+- 🌐 Explore cities and countries with contextual data
+- 📍 Map view with real-time geolocation using custom hooks and react=leaflet library
+- 🔍 Dynamic routing and navigation using React Router
+- 📊 Modular component structure with context-based state management
+- 🖼️ API Integration: Wikipedia for content, Unsplash for images
+- 🧭 Search cities using Amadeus (custom search component)
+- ⚙️ Reusable components: Buttons, Sidebar, Spinner, NavBars
+
+---
+
+##📬 Contact
+Created by Pratham Tandon
+📧 prattandon1507@gmail.com
+
+---
+
+## 📄 License
+This project is open-source under the MIT License.
+
