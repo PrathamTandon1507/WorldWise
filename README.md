@@ -15,8 +15,14 @@
 - ⚙️ Reusable components: Buttons, Sidebar, Spinner, NavBars
 
 ---
+## 🚀 Getting Started
 
-##📬 Contact
+### 1. Clone the repo
+
+git clone https://github.com/PrathamTandon1507/Travel-Booking.git
+cd Travel-Booking
+
+## 📬 Contact
 Created by Pratham Tandon
 📧 prattandon1507@gmail.com
 
